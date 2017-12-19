@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/lib/structure.css" type="text/css"/>
+    <link rel="stylesheet" href="css/lib/angucomplete.css" type="text/css"/>
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+</head>
+<body ng-app="directory">
+        
+    <div class="home" ng-controller="homeController">
+       
+     <div class="panel panel-default">
+            <div class="panel-body">
+                <span class="left">
+                    <span>Accolite</span>
+                    <span>|</span>
+                    <span>Directory</span>
+                </span>
+                <span class="right" ng-if="home">
+                    <span>Name</span>
+                    <span>|</span>
+                    <span>Help ?</span>
+                </span>
+                <span class="right" ng-if="!home">
+                    <div class="searchComponent">
+                         <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" localdata="peoples" searchfields="fullName" minlength="1" titlefield="fullName" />
+                    </div>
+                    <div class="" ng-if="selectedPerson">
+                        You selected <span class="bold-span">{{selectedPerson.originalObject.fullName}}</span>
+                    </div>
+                </span>
+            </div> 
+        </div>
+        <div ng-if="home">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="searchComponent" ng-model="selectedPerson">
+                        <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" localdata="peoples" searchfields="fullName" minlength="1" titlefield="fullName"/>
+                    </div>
+                    <div class="" ng-if="selectedPerson" ng-init="init(selectedPerson)">
+                        You selected <span class="bold-span">{{selectedPerson.originalObject.fullName}}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="searchResult"> Search Result</div>
+                </div>
+                <div><input type="button" value="Go to Detail Page" ng-click="changeRoute()"/></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+ 
+    <script src="js/lib/jquery-3.2.1.min.js"></script>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-ui-router.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/angular-touch.min.js"></script>
+    <script src="js/lib/angucomplete.js"></script>
+    <script src="app.js"></script>
+    <script src="js/services/dataService.js"></script>
+    <script src="js/controllers/home.controller.js"></script>
+    <script src="js/controllers/detail.controller.js"></script>
+    
+</body>    
+</html>

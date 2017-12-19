@@ -1,0 +1,69 @@
+<div>
+    <div class="panel panel-default">
+            <div class="panel-body">
+                <span class="personImage left">
+                    <img ng-src="{{people.photoURL}}">
+                </span>
+                <span class="imageInfo left">
+                   <div> Name:<span>{{people.fullName}}</span></div>
+                   <div>Designation:<span>Associate Technical Delivery Manager</span></div>
+                   <div> BU:<span>{{people.departmentDesc}}</span></div>
+                   <div> location:<span>{{people.city}}</span></div>
+                </span>
+            </div>
+        </div>
+    <div class="panel panel-default">
+            <div class="panel-body">
+                <span class="contactInfo left">
+                    
+                    <ul>
+                       <li>{{people.workPhone}}</li>
+                       <li>{{people.mobilePhone}}</li>
+                       <li>{{people.homePhone}}</li>
+                       <li>{{people.skypeId}}</li>
+                       <li>{{people.emailAddress}}</li>
+                       <li>{{people.city}}</li>
+                    </ul>
+                </span>
+                <span class="workProfile left">
+                    
+                    <ul>
+                       <li>{{people.employeeIDNumber}}</li>
+                       <li>{{people.workerType}}</li>
+                       <li>{{people.departmentDesc}}</li>
+                    </ul>
+                </span>
+                <span class="org left">
+                    <div>Structure Management</div>
+                    <div class="structureManagement">
+                        <span class="hierarchy">{{people.seniorSupervisior}}</span>
+                        <span class="hierarchy">{{people.supervisor}}</span>
+                        <span class="hierarchy">{{people.fullName}}</span>
+                        
+                    </div>
+                    <div class="tooltip" ng-show="tooltip">
+                        <div>{{people.workPhone}}</div>
+                        <div>{{people.mobilePhone}}</div>
+                        <div>{{people.homePhone}}</div>
+                        <div>{{people.skypeId}}</div>
+                    </div>
+                    <div class="directs">
+                        directs(4)
+                        <ul>
+                            <li>name1</li>
+                            <li>name2</li>
+                            <li>name3</li>
+                        </ul>
+                    </div>
+                    <div class="contingents">
+                        contingents(6)
+                        <ul>
+                            <li>name1</li>
+                            <li>name2</li>
+                            <li>name3</li>
+                        </ul>
+                    </div>
+                </span>
+            </div>
+        </div> 
+</div>    

@@ -1,0 +1,74 @@
+{
+	"size":1,
+	"totalSize":1,
+	"success": true,
+	"people": {
+		"size":1,
+		"totalSize": 0,
+		"item":[{
+			"vendor":"Accolite Software India Pvt Ltd",
+			"perOrg":"CWR",
+			"departmentDesc": "IBD & GCM Technology",
+			"workerType": "C",
+			"emailAddress":"Abhijit.Daund@morganstanley.com",
+			"mailDrop":"daund@mumbai.exchange.ms.com",
+			"assignmentContact":[{
+				"objectType":"person",
+				"emailAddress":"Nishant.Rupani@morganstanley.com",
+				"photoURL":"photo.jpg",
+				"fullName":"Nishant Rupani",
+				"surname":"Rupani",
+				"mobilePhone":["+91 80 8025-5222"],
+				"workPhone":"+91 22 6641-0654",
+				"divisionDesc":"Institutional Securities Technology"
+			}],
+			"countryCode":"IND",
+			"fullName":"Abhijit Daund",
+			"mobilePhone":["+91 84201-21809"],
+			"workPhone": "+91 8113 013-904",
+			"postalCode":"560103",
+			"subDepartmentDesc":"IBD & GCM Technology",
+			"superDepartmentDesc":"Advisory & Sales Distribution",
+			"city":"bangalore",
+			"divisionDesc":"Institutional Securities Tech",
+			"employeeIDNumber":"15PRY",
+            "photoURL":"photo.ico"
+			
+		}]
+	},
+	"groups":{
+		"size": 0,
+		"totalSize": 0,
+		"item": null
+	},
+	"aliases":{
+		"size": 0,
+		"totalSize": 0,
+		"item": null
+	},
+	"listings":{
+		"size": 0,
+		"totalSize": 0,
+		"item": null
+		},
+	"proids":{
+		"size": 0,
+		"totalSize": 0,
+		"item": null
+	},
+	"accounts":{
+		"size": 0,
+		"totalSize": 0,
+		"item": null
+	},
+	"buildings":{
+		"size": 0,
+		"totalSize": 0,
+		"item": null
+		},
+	"conferenceRooms":{
+		"size": 0,
+		"totalSize": 0,
+		"item": null
+	}
+}	

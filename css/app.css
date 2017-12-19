@@ -1,0 +1,67 @@
+html,body{
+    width: 100%;
+    height:100%;
+}
+.left{
+    float:left;
+}
+.left span{
+    margin:5px;
+    
+}
+.right{
+    float:right;
+}
+.right span{
+    margin:5px;
+}
+.header{
+    display:block;
+}
+.home{
+    /*border-width: thin;
+    border-style: ridge;*/
+    width:100%;
+    height:15%;
+    /*margin-left: 45px;
+    margin-top:10px;*/
+}
+.searchComponent{
+    /*border-width: thin;
+    border-style: ridge;*/
+}
+.searchResult{
+    /*border-width: thin;
+    border-style: ridge;*/
+    height:60%;
+}
+.page-header{
+    height: 40px;
+}
+.panel{
+    margin-bottom:1px;
+}
+.personImage{
+    
+}
+.imageInfo{
+    
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.panel-body li{
+    list-style-type: none; 
+}
+.contactInfo{
+    margin-right:120px;
+}
+.workProfile{
+    margin-right:120px;
+}
+.org{
+    margin-right:120px;
+}
