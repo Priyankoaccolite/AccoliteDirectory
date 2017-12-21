@@ -15,9 +15,10 @@ app.controller("detailController",["$scope","dataService","$stateParams",functio
         }
     }*/
     $scope.people=$scope.data.people.item[0];
-    $scope.people.seniorSupervisior="abc";
-    $scope.people.supervisor="def";
-    
+    //$scope.people.seniorSupervisior="abc";
+    //$scope.people.supervisor="def";
+    $scope.contingents=$scope.people.contingents;
+    $scope.directs=$scope.people.directs;
     
     
 }])

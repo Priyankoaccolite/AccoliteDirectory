@@ -26,15 +26,34 @@
 			"fullName":"Abhijit Daund",
 			"mobilePhone":["+91 84201-21809"],
 			"workPhone": "+91 8113 013-904",
+            "homePhone":"8420121809",
+            "skypeId":"Abhijit.Daund1@accoliteindia.com",
 			"postalCode":"560103",
 			"subDepartmentDesc":"IBD & GCM Technology",
 			"superDepartmentDesc":"Advisory & Sales Distribution",
 			"city":"bangalore",
 			"divisionDesc":"Institutional Securities Tech",
+            "seniorSupervisior":"seniorSupervisior",
+            "supervisor":"supervisor",
 			"employeeIDNumber":"15PRY",
-            "photoURL":"photo.ico"
-			
-		}]
+            "designation":"Associate Technical Delivery Manager",
+            "photoURL":"photo.ico",
+            "contingents":[{
+                    "fullName":"William Reilly"
+                },{
+                    "fullName":"abcd"
+                },{
+                    "fullName":"def"
+                }],
+            "directs":[{
+                    "fullName":"William Reilly"
+                },{
+                    "fullName":"abcd"
+                },{
+                    "fullName":"def"
+                }]
+
+         }]
 	},
 	"groups":{
 		"size": 0,
@@ -71,4 +90,6 @@
 		"totalSize": 0,
 		"item": null
 	}
+    
+    
 }	
