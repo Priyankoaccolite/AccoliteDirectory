@@ -1,69 +1,133 @@
-<div>
-    <div class="panel panel-default">
-            <div class="panel-body">
-                <span class="personImage left">
-                    <img ng-src="{{people.photoURL}}">
-                </span>
-                <span class="imageInfo left">
-                   <div> Name:<span>{{people.fullName}}</span></div>
-                   <div>Designation:<span>Associate Technical Delivery Manager</span></div>
-                   <div> BU:<span>{{people.departmentDesc}}</span></div>
-                   <div> location:<span>{{people.city}}</span></div>
-                </span>
-            </div>
+
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron marginzerobottom">
+      <div class="container">
+    <div class="row">
+     
+    <div class="col-sm-3 col-md-3 paddingtop6 width17">
+        <img src="./images/Man-PNG-Pic.png" alt="" class="bigImg" />
+    </div>
+    <div class="col-sm-3 col-md-3 paddingtop6 marginzeroleft">
+                        <h3>
+                           Mukesh Mishra</h3>
+                        <small><i class="glyphicon glyphicon-map-marker">
+                        </i><cite title="San Francisco, USA">San Francisco, USA </cite></small>
+                        <p>
+                            <i>Senior Software Engineer</i>
+                            <br />
+                            <i>BFSI</i>
+                            <br />
+                           </p>
+                        <!-- Split button -->
+                       </div>
+             
+              <div class="col-sm-4 col-md-4" class="paddingtop6" ></div>
+     </div>
+      </div>
+    </div>
+  
+
+  
+    <div class="container">
+      <!-- Example row of columns -->
+     <div class="row">
+    <h3>Profile</h3>
+    <hr>
+    </div>
+    
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Contact Info </h4>
+    <table class="table table-borderless ">
+     <tr>
+     <td class="width50">Work</td><td>:</td><td><b>+120 808023</b></td>
+     </tr>
+     <tr>
+     <td class="width50">Mobile</td><td>:</td><td><b>+120 808023</b></td>
+     </tr>
+      <tr>
+     <td class="width50">Home</td><td>:</td><td><b>+120 808023</b></td>
+     </tr>
+      <tr>
+     <td class="width50"><i class="glyphicon glyphicon-envelope"></td><td>:</td><td><b>mukeshmishra@accolite.com</b></td>
+     </tr>
+      <tr>
+     <td class="width50"><i class="fa fa-md fa-skype"></td><td>:</td><td><b>mukeshmishra@accolite.com</b></td>
+     </tr>
+     <tr>
+     <td class="width50"><i class="glyphicon glyphicon-map-marker"></td><td>:</td><td><b>#245,Green Glen Layout,Bellandur Banglore.</b></td>
+     </tr>
+    </table>
         </div>
-    <div class="panel panel-default">
-            <div class="panel-body">
-                <span class="contactInfo left">
-                    
-                    <ul>
-                       <li>{{people.workPhone}}</li>
-                       <li>{{people.mobilePhone}}</li>
-                       <li>{{people.homePhone}}</li>
-                       <li>{{people.skypeId}}</li>
-                       <li>{{people.emailAddress}}</li>
-                       <li>{{people.city}}</li>
-                    </ul>
-                </span>
-                <span class="workProfile left">
-                    
-                    <ul>
-                       <li>{{people.employeeIDNumber}}</li>
-                       <li>{{people.workerType}}</li>
-                       <li>{{people.departmentDesc}}</li>
-                    </ul>
-                </span>
-                <span class="org left">
-                    <div>Structure Management</div>
-                    <div class="structureManagement">
-                        <span class="hierarchy">{{people.seniorSupervisior}}</span>
-                        <span class="hierarchy">{{people.supervisor}}</span>
-                        <span class="hierarchy">{{people.fullName}}</span>
-                        
-                    </div>
-                    <div class="tooltip" ng-show="tooltip">
-                        <div>{{people.workPhone}}</div>
-                        <div>{{people.mobilePhone}}</div>
-                        <div>{{people.homePhone}}</div>
-                        <div>{{people.skypeId}}</div>
-                    </div>
-                    <div class="directs">
-                        directs(4)
-                        <ul>
-                            <li>name1</li>
-                            <li>name2</li>
-                            <li>name3</li>
-                        </ul>
-                    </div>
-                    <div class="contingents">
-                        contingents(6)
-                        <ul>
-                            <li>name1</li>
-                            <li>name2</li>
-                            <li>name3</li>
-                        </ul>
-                    </div>
-                </span>
-            </div>
-        </div> 
-</div>    
+        <div class="col-md-4">
+          <h4>Work Profile</h4>
+          <table class="table table-borderless ">
+     <tr>
+     <td class="width70">Accolite Id</td><td>&nbsp;:</td><td class="minwidth270"><b>2020</b></td>
+     </tr>
+     <tr>
+     <td class="width70">Type</td><td>&nbsp;:</td><td class="minwidth270"><b>Employee</b></td>
+     </tr>
+      <tr>
+     <td class="width70">BU</td><td>&nbsp;:</td><td class="minwidth270"><b>BFSI</b></td>
+     </tr>
+     
+    </table>
+      
+       </div>
+        <div class="col-md-4">
+          <h4>ORG Structure</h4>
+      <h5 style="color:gray;">Managers</h5>
+      <ul style="list-style-type:none" id="managerList">
+      <li> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>Mukesh Mishra</span><br><img  class="arrowImg" src="./images/arrow.png" />
+      </li>
+      <li>
+          <img src="./images/Man-PNG-Pic.png" class="smalluserImg" alt="" />&nbsp;<span>Mukesh Mishra</span><br><span></span><img  class="arrowImg" src="./images/arrow.png" />
+      </li>
+      <li class="highlightuser">
+      <img src="./images/Man-PNG-Pic.png" class="smalluserImg" /><span>&nbsp; Mukesh Mishra</span>
+      </li>
+      </ul>
+           <h5 style="color:gray;">Directs(3)</h5>
+          <ul style="list-style-type:none">
+          <li> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>Mukesh Mishra</span>
+          </li>
+
+          <li>
+          <img src="./images/Man-PNG-Pic.png"  class="smalluserImg" alt="" />&nbsp;<span>Mukesh Mishra</span>
+          </li>
+          <li>
+          <img src="./images/Man-PNG-Pic.png" class="smalluserImg" /><span>&nbsp; Mukesh Mishra</span>
+          </li>
+          </ul> 
+        <h5 style="color:gray;">Contigents(3)</h5>
+          <ul style="list-style-type:none">
+          <li> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>Mukesh Mishra</span>
+          </li>
+          <li>
+          <img src="./images/Man-PNG-Pic.png" class="smalluserImg" alt="" />&nbsp;<span>Mukesh Mishra</span>
+          </li>
+          <li>
+          <img src="./images/Man-PNG-Pic.png" class="smalluserImg" /><span>&nbsp; Mukesh Mishra</span>
+          </li>
+          </ul>        
+            
+   
+          </div>
+      </div>
+
+
+
+
+      
+    </div> <!-- /container -->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+  
+

@@ -1,58 +1,65 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="css/lib/structure.css" type="text/css"/>
-    <link rel="stylesheet" href="css/lib/angucomplete.css" type="text/css"/>
-    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+    <link href="css/lib/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/lib/bootstrap/css/bootstrap.css" type="text/css"/>
+     <!-- <link rel="stylesheet" href="css/lib/structure.css" type="text/css"/> -->
+    <link rel="stylesheet" href="css/lib/angucomplete.css" type="text/css"/> 
+    <!-- <link rel="stylesheet" href="css/app.css" type="text/css"/> -->
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
-<body ng-app="directory">
+<body ng-app="directory" ng-controller="homeController">
         
-    <div class="home" ng-controller="homeController">
-       
-     <div class="panel panel-default">
-            <div class="panel-body">
-                <span class="left">
-                    <span>Accolite</span>
-                    <span>|</span>
-                    <span>Directory</span>
-                </span>
-                <span class="right" ng-if="home">
-                    <span>Name</span>
-                    <span>|</span>
-                    <span>Help ?</span>
-                </span>
-                <span class="right" ng-if="!home">
-                    <div class="searchComponent">
-                         <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" localdata="peoples" searchfields="fullName" minlength="1" titlefield="fullName" />
-                    </div>
-                    <div class="" ng-if="selectedPerson">
-                        You selected <span class="bold-span">{{selectedPerson.originalObject.fullName}}</span>
-                    </div>
-                </span>
-            </div> 
-        </div>
-        <div ng-if="home">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="searchComponent" ng-model="selectedPerson">
-                        <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" localdata="peoples" searchfields="fullName" minlength="1" titlefield="fullName"/>
-                    </div>
-                    <div class="" ng-if="selectedPerson" ng-init="init(selectedPerson)">
-                        You selected <span class="bold-span">{{selectedPerson.originalObject.fullName}}</span>
-                    </div>
-                </div>
+ <nav class="navbar  navbar-inverse navbar-fixed-top bg-inverse" role="navigation" ng-if="!home">
+  <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+           <span class="navbar-brand divider">Accolite</span>
+            <span class="navbar-brand" >Directory</span>
+            
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse">
+           
+            <div class="col-lg-8 col-md-9 margintop6">
+            <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" localdata="peoples" searchfields="fullName" minlength="1" inputclass="form-control" titlefield="fullName"/>
             </div>
             
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="searchResult"> Search Result</div>
-                </div>
-                <div><input type="button" value="Go to Detail Page" ng-click="changeRoute()"/></div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
+            <ul class="nav navbar-nav navbar-right navbarUl">
+             <!--<li><a  class="active" href="#">Home</a></li>
+              <li><a  class="active" href="#">Help</a></li>-->
+               <!-- <li>MUkesh Mishra</li>-->
+                
+                <li><span class="headerImgSpan">MUkesh Mishra</span><span><img src="./images/Man-PNG-Pic.png" class="smalluserImg" /></span></li>
+                <li><a  class="active" href="#">Help</a></li
+              </ul>
+          </div><!-- /.navbar-collapse -->
+        </nav>
+        <nav class="navbar  navbar-inverse navbar-fixed-top bg-inverse" role="navigation" ng-if="home">
+  <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+               	<span class="navbar-brand divider">Accolite</span>
+                <span class="navbar-brand" >Directory</span>
+               </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right navbarUl">
+                <li><span class="headerImgSpan">MUkesh Mishra</span><span><img src="./images/Man-PNG-Pic.png" class="smalluserImg" /></span></li>
+                <li><a  class="active" href="#">Help</a></li
+              </ul>
+              </div><!-- /.navbar-collapse -->
+</nav>
+
+
+		<div ng-if="home" class="row col-lg-12 col-md-12 col-sm-12 searchbox">
+           
+          <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" localdata="peoples" searchfields="fullName" minlength="1" inputclass="form-control" titlefield="fullName"/>
+ 			
+		</div>
+
+
+    <div>
         <div ui-view></div>
     </div>
  

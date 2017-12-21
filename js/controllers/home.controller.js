@@ -34,5 +34,5 @@ app.controller("homeController",["$scope","$rootScope","dataService","$state",fu
     $scope.init=function(selectedPerson){
         $scope.selectedPerson=selectedPerson;
     }
-   
+   //$scope.changeRoute();
 }])
