@@ -8,17 +8,16 @@
     <div class="row">
      
     <div class="col-sm-3 col-md-3 paddingtop6 width17">
-        <img src="./images/Man-PNG-Pic.png" alt="" class="bigImg" />
+        <img ng-src="{{people.photoURL}}" alt="" class="bigImg" />
     </div>
     <div class="col-sm-3 col-md-3 paddingtop6 marginzeroleft">
-                        <h3>
-                           Mukesh Mishra</h3>
+                        <h3>{{people.fullName}}</h3>
                         <small><i class="glyphicon glyphicon-map-marker">
-                        </i><cite title="San Francisco, USA">San Francisco, USA </cite></small>
+                        </i><cite title="{{people.location}}">{{people.location}}</cite></small>
                         <p>
-                            <i>Senior Software Engineer</i>
+                            <i>{{people.designation}}</i>
                             <br />
-                            <i>BFSI</i>
+                            <i>{{people.superDepartmentDesc}}</i>
                             <br />
                            </p>
                         <!-- Split button -->
@@ -43,22 +42,22 @@
           <h4>Contact Info </h4>
     <table class="table table-borderless ">
      <tr>
-     <td class="width50">Work</td><td>:</td><td><b>+120 808023</b></td>
+     <td class="width50">Work</td><td>:</td><td><b>{{people.workPhone}}</b></td>
      </tr>
      <tr>
-     <td class="width50">Mobile</td><td>:</td><td><b>+120 808023</b></td>
+     <td class="width50">Mobile</td><td>:</td><td><b>{{people.mobilePhone}}</b></td>
      </tr>
       <tr>
-     <td class="width50">Home</td><td>:</td><td><b>+120 808023</b></td>
+     <td class="width50">Home</td><td>:</td><td><b>{{people.homePhone}}</b></td>
      </tr>
       <tr>
-     <td class="width50"><i class="glyphicon glyphicon-envelope"></td><td>:</td><td><b>mukeshmishra@accolite.com</b></td>
+     <td class="width50"><i class="glyphicon glyphicon-envelope"></td><td>:</td><td><b>{{people.emailAddress}}</b></td>
      </tr>
       <tr>
-     <td class="width50"><i class="fa fa-md fa-skype"></td><td>:</td><td><b>mukeshmishra@accolite.com</b></td>
+     <td class="width50"><i class="fa fa-md fa-skype"></td><td>:</td><td><b>{{people.skypeId}}</b></td>
      </tr>
      <tr>
-     <td class="width50"><i class="glyphicon glyphicon-map-marker"></td><td>:</td><td><b>#245,Green Glen Layout,Bellandur Banglore.</b></td>
+     <td class="width50"><i class="glyphicon glyphicon-map-marker"></td><td>:</td><td><b>{{people.location}}</b></td>
      </tr>
     </table>
         </div>
@@ -66,13 +65,13 @@
           <h4>Work Profile</h4>
           <table class="table table-borderless ">
      <tr>
-     <td class="width70">Accolite Id</td><td>&nbsp;:</td><td class="minwidth270"><b>2020</b></td>
+     <td class="width70">Accolite Id</td><td>&nbsp;:</td><td class="minwidth270"><b>{{people.employeeIDNumber}}</b></td>
      </tr>
      <tr>
-     <td class="width70">Type</td><td>&nbsp;:</td><td class="minwidth270"><b>Employee</b></td>
+     <td class="width70">Type</td><td>&nbsp;:</td><td class="minwidth270"><b>{{people.workerType}}</b></td>
      </tr>
       <tr>
-     <td class="width70">BU</td><td>&nbsp;:</td><td class="minwidth270"><b>BFSI</b></td>
+     <td class="width70">BU</td><td>&nbsp;:</td><td class="minwidth270"><b>{{people.superDepartmentDesc}}</b></td>
      </tr>
      
     </table>
@@ -82,37 +81,37 @@
           <h4>ORG Structure</h4>
       <h5 style="color:gray;">Managers</h5>
       <ul style="list-style-type:none" id="managerList">
-      <li> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>Mukesh Mishra</span><br><img  class="arrowImg" src="./images/arrow.png" />
+      <li> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>{{people.seniorSupervisior}}</span><br><img  class="arrowImg" src="./images/arrow.png" />
       </li>
       <li>
-          <img src="./images/Man-PNG-Pic.png" class="smalluserImg" alt="" />&nbsp;<span>Mukesh Mishra</span><br><span></span><img  class="arrowImg" src="./images/arrow.png" />
+          <img src="./images/Man-PNG-Pic.png" class="smalluserImg" alt="" />&nbsp;<span>{{people.supervisor}}</span><br><span></span><img  class="arrowImg" src="./images/arrow.png" />
       </li>
       <li class="highlightuser">
-      <img src="./images/Man-PNG-Pic.png" class="smalluserImg" /><span>&nbsp; Mukesh Mishra</span>
+      <img src="./images/Man-PNG-Pic.png" class="smalluserImg" /><span>&nbsp; {{people.fullName}}</span>
       </li>
       </ul>
            <h5 style="color:gray;">Directs(3)</h5>
           <ul style="list-style-type:none">
-          <li> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>Mukesh Mishra</span>
+          <li ng-repeat="direct in directs"> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>{{direct.fullName}}</span>
           </li>
 
-          <li>
+          <!--<li>
           <img src="./images/Man-PNG-Pic.png"  class="smalluserImg" alt="" />&nbsp;<span>Mukesh Mishra</span>
           </li>
           <li>
           <img src="./images/Man-PNG-Pic.png" class="smalluserImg" /><span>&nbsp; Mukesh Mishra</span>
-          </li>
+          </li>-->
           </ul> 
         <h5 style="color:gray;">Contigents(3)</h5>
           <ul style="list-style-type:none">
-          <li> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>Mukesh Mishra</span>
+          <li ng-repeat="contingent in contingents"> <img src="./images/Man-PNG-Pic.png" class="smalluserImg" />&nbsp;<span>{{contingent.fullName}}</span>
           </li>
-          <li>
+          <!--<li>
           <img src="./images/Man-PNG-Pic.png" class="smalluserImg" alt="" />&nbsp;<span>Mukesh Mishra</span>
           </li>
           <li>
           <img src="./images/Man-PNG-Pic.png" class="smalluserImg" /><span>&nbsp; Mukesh Mishra</span>
-          </li>
+          </li>-->
           </ul>        
             
    

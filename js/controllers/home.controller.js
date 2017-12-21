@@ -4,10 +4,10 @@ app.controller("homeController",["$scope","$rootScope","dataService","$state",fu
     $scope.directoryData={};
     $scope.home=true;
     //$scope.selectedPerson={};
-    $scope.changeRoute=function(){
+    /*$scope.changeRoute=function(){
         $scope.home=false;
         $state.go("details");
-    };
+    };*/
     $scope.peoples=[];
     dataService.getData().then(function(data){
         dataService.storedData=data.data;
@@ -33,6 +33,7 @@ app.controller("homeController",["$scope","$rootScope","dataService","$state",fu
     
     $scope.init=function(selectedPerson){
         $scope.selectedPerson=selectedPerson;
+        
     }
    //$scope.changeRoute();
 }])
