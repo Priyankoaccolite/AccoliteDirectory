@@ -6,7 +6,7 @@
                 </span>
                 <span class="imageInfo left">
                    <div> Name:<span>{{people.fullName}}</span></div>
-                   <div>Designation:<span>Associate Technical Delivery Manager</span></div>
+                   <div>Designation:<span>{{people.designation}}</span></div>
                    <div> BU:<span>{{people.departmentDesc}}</span></div>
                    <div> location:<span>{{people.city}}</span></div>
                 </span>
@@ -50,17 +50,19 @@
                     <div class="directs">
                         directs(4)
                         <ul>
-                            <li>name1</li>
-                            <li>name2</li>
-                            <li>name3</li>
+                          
+                            <li ng-repeat="direct in directs">
+                                {{direct.fullName}}
+                            </li>
                         </ul>
                     </div>
                     <div class="contingents">
                         contingents(6)
                         <ul>
-                            <li>name1</li>
-                            <li>name2</li>
-                            <li>name3</li>
+                            
+                            <li ng-repeat="contingent in contingents">
+                                {{contingent.fullName}}
+                            </li>
                         </ul>
                     </div>
                 </span>
