@@ -16,6 +16,14 @@ app.config(function($stateProvider){
         controllerAs: 'dc'
     })
     
+     $stateProvider.state('employeeCreation',{
+        url: '/employeeCreation',
+        templateUrl: 'templates/employeecreation.html',
+         controller: 'employeecreationController',
+        
+        
+    })
+    
 })
 
 

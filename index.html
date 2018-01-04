@@ -3,6 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link href="css/lib/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/lib/bootstrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/lib/bootstrap/css/bootstrap-datetimepicker.css" type="text/css">
      <!-- <link rel="stylesheet" href="css/lib/structure.css" type="text/css"/> -->
     <link rel="stylesheet" href="css/lib/angucomplete.css" type="text/css"/> 
     <!-- <link rel="stylesheet" href="css/app.css" type="text/css"/> -->
@@ -56,6 +57,16 @@
 </nav>
 
 
+        <div class="row creationContainer" ng-if="home">
+           <span>
+            <a class="active" ng-click="changeRoute('employeeCreation')" href="#">Create Employee</a>
+            </span> 
+            <span>
+            <a class="active" href="#">Bulk Employee Upload</a>
+            </span> 
+            
+        </div>  
+            
 		<div ng-if="home" class="row col-lg-12 col-md-12 col-sm-12 searchbox">
             
             <div ng-model="selectedPerson">
@@ -75,12 +86,14 @@
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/angular-ui-router.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/bootstrap-datepicker.js"></script>
     <script src="js/lib/angular-touch.min.js"></script>
     <script src="js/lib/angucomplete.js"></script>
     <script src="app.js"></script>
     <script src="js/services/dataService.js"></script>
     <script src="js/controllers/home.controller.js"></script>
     <script src="js/controllers/detail.controller.js"></script>
+    <script src="js/controllers/employeecreation.Controller.js"></script> 
     
 </body>    
 </html>
