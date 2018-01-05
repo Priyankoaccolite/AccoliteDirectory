@@ -11,19 +11,30 @@ app.controller("employeecreationController",["$scope","lookupService","$statePar
     $scope.designationList=[];
     $scope.projectList=[];
     $scope.martialStatusList=[];
+    $scope.employee={};
+    $scope.employee.address=[
+        {
+          "addressType":null,
+            "address":"",
+            "country":null,
+            "state":null,
+            "city":"",
+            "pincode":""
+            
+        },
+        {
+          "addressType":null,
+            "address":"",
+            "country":null,
+            "state":null,
+            "city":"",
+            "pincode":""
+            
+        }
+    ];
     $scope.getallLookups=function(){
       lookupService.getAllLookups().then(function(res){
-          /*$scope.genderList=lookupService.filterLookups(res.data,'GENDER');
-          $scope.employementTypeList=lookupService.filterLookups(res.data,'EMPLOYMENT_TYPE');
-          $scope.martialStatusList=lookupService.filterLookups(res.data,'MARITAL_STATUS');
-          $scope.addressTypeList=lookupService.filterLookups(res.data,'ADDRESS_TYPE');
-          $scope.countryList=lookupService.filterLookups(res.data,'COUNTRY');
-          $scope.organzationList=lookupService.filterLookups(res.data,'ORGANIZATION');
-          $scope.businessUnitList=lookupService.filterLookups(res.data,'BU');
-          $scope.designationList=lookupService.filterLookups(res.data,'DESIGNATION');
-          $scope.projectList=lookupService.filterLookups(res.data,'PROJECT');
-          $scope.locationsList=lookupService.filterLookups(res.data,'LOCATION');*/
-          getParticularLookUp(res.data);
+         getParticularLookUp(res.data);
           
       },function(error){
           console.log(error);
