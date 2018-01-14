@@ -35,9 +35,9 @@
                         <div class="row">
                              <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                          <select class="form-control" id="gender" ng-model="gender1" ng-options="gender.id as gender.description for gender in genderList">
-                                                      <option>Select Gender</option>
-                                                        </select>
+                                          <select class="form-control" id="gender" ng-model="employee.gender" ng-options="gender.id as gender.description for gender in genderList">
+                                                      <option value="">Select Gender</option>
+                                                    </select>
                                                 </div>
                                     </div>
 
@@ -78,11 +78,9 @@
                                     
                                     <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                           <select class="form-control" id="Type">
-                                                      <option> Select Employement Type</option>
-                                                      <option value="1">Employee</option>
-                                                      <option value="2">Intern</option>
-                                                        <option value="3">Consultant</option>
+                                           <select class="form-control" id="Type" ng-model="employee.employementType" ng-options="employementType.id as employementType.description for employementType in employementTypeList">
+                                                      <option value=""> Select Employement Type</option>
+                                                      
                                                      </select>
                                         </div>
                                     </div>
@@ -164,10 +162,9 @@
                                     
                                       <div class="col-lg-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                <select class="form-control" id="AddressType">
-                                                      <option> Select Type</option>
-                                                      <option value="1">Current</option>
-                                                      <option value="2">Permanent</option>
+                                <select class="form-control" id="AddressType" ng-model="employee.address[0].addressType"  ng-options="addressType.id as addressType.description for addressType in addressTypeList">
+                                                      <option value=""> Select Type</option>
+                                                    
                                                         
                                                      </select>
                                         </div>
@@ -225,12 +222,9 @@
                                     
                                       <div class="col-lg-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                <select class="form-control" id="AddressType">
-                                                      <option> Select Type</option>
-                                                      <option value="1">Current</option>
-                                                      <option value="2">Permanent</option>
-                                                        
-                                                     </select>
+                                <select class="form-control" id="AddressType1" ng-model="employee.address[1].addressType"  ng-options="addressType.id as addressType.description for addressType in addressTypeList">
+                                    <option value="">Select Type</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-8 col-sm-8 col-md-8">
@@ -395,7 +389,9 @@
                                     </div>
                                      <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                            <input type="text" name="Martial_Status" id="Martial_Status" class="form-control input-sm" placeholder="Martial Status">
+                                             <select class="form-control" id="maritial_Status" ng-model="employee.maritialStatus"  ng-options="maritialStatus.id as maritialStatus.description for maritialStatus in martialStatusList">
+                                            <option value="">Select Maritial Status</option>
+                                            </select>
                                         </div>
                                     </div>
                             <div class="col-lg-3 col-sm-3 col-md-3">
