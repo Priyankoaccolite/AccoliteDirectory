@@ -1,4 +1,9 @@
-
+html,body {
+      margin: 0;
+      padding: 0;
+      background-color: White;
+      overflow-x: hidden;
+    }
 
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
@@ -125,4 +130,17 @@ span{
 }
 select{
     height:38px ! important;
+}
+#myGrid{
+    width:100% !important;
+    height:100% !important;
+}
+.menu{
+   border-bottom-width: thin;
+border-bottom-style: groove;
+margin-bottom: 15px;
+}
+
+.slick-header{
+    height:25px;
 }

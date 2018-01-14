@@ -10,6 +10,16 @@ app.service("dataService",["$http","$q",function($http,$q){
         });
         return defered.promise;
     };
+    this.getEmployee=function(){
+        var defered=$q.defer();
+        //var getEmployeeUrl='http://10.4.14.179:8080/accolite/hrms/employee/getEmployeeBySearch?searchText=0000';
+        $http.get('employee.json').then(function(data){
+            defered.resolve(data);
+        },function(error){
+            defered.reject(error); 
+        });
+        return defered.promise;
+    }
     
     
 }]);

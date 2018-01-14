@@ -25,10 +25,19 @@ app.config(function($stateProvider){
      $stateProvider.state('employeeCreation',{
         url: '/employeeCreation',
         templateUrl: 'templates/employeecreation.html',
-         controller: 'employeecreationController',
-        
-        
-    })
+        controller: 'employeecreationController'
+     })
+     $stateProvider.state('listEmployee',{
+        url: '/listEmployee',
+        templateUrl: 'templates/employeeList.html',
+        controller: 'employeeListController'
+     })
+    $stateProvider.state('listEmployee.detailEmployee',{
+        url: '/detailEmployee/{paramId}',
+        //parent: 'listEmployee',
+        templateUrl: 'templates/employeeDetail.html',
+        controller: 'detailEmployeeController'
+     })
     
 })
 
