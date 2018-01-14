@@ -11,6 +11,7 @@ app.controller("employeecreationController",["$scope","lookupService","$statePar
     $scope.designationList=[];
     $scope.projectList=[];
     $scope.martialStatusList=[];
+    $scope.datas=["employee1","employee2","employee3","employee4","employee5"];
     $scope.getallLookups=function(){
       lookupService.getAllLookups().then(function(res){
           /*$scope.genderList=lookupService.filterLookups(res.data,'GENDER');
@@ -68,6 +69,12 @@ app.controller("employeecreationController",["$scope","lookupService","$statePar
             
         }
     }
+    
+     $scope.dataFunction=function(data){
+         alert("clicked");
+         var result=data;
+         console.log(result);
+     };
     
      $scope.getallLookups();
     
