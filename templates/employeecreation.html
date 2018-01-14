@@ -67,7 +67,9 @@
                             </div>
                             <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                            <input type="text" name="location" id="location" class="form-control input-sm" placeholder="Location">
+                                             <select class="form-control" id="workLocation" ng-model="employee.workLocation" ng-options="location.id as location.name for location in locationsList">
+                                                      <option value="">Select Worklocation</option>
+                                                    </select>
                                         </div>
                                     </div>
                             
@@ -180,12 +182,9 @@
                                 <div class="row">
                                     <div class="col-lg-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                <select class="form-control" id="Country">
-                                                      <option> Select Country</option>
-                                                      <option value="1">India</option>
-                                                      <option value="2">USA</option>
-                                                        
-                                                     </select>
+                                <select class="form-control" id="Country" ng-model="employee.address[0].country" ng-options="country.id as country.description for country in countryList" ng-change="getStateList()">
+                                                      <option value=""> Select Country</option>
+                                                    </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-4 col-md-4">
@@ -200,7 +199,7 @@
                                     </div>
                                     <div class="col-lg-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                             <input type="text" name="city" id="city" class="form-control input-sm" placeholder="City">
+                                             <input type="text"  ng-model="employee.address[0].city" name="city" id="city" class="form-control input-sm" placeholder="City">
                                         </div>
                                     </div>
                                 </div>
@@ -209,7 +208,7 @@
 
                                 <div class="col-lg-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                            <input type="text" name="pincode" id="pincode" class="form-control input-sm" placeholder="Postal Code">
+                                            <input type="text"   ng-model="employee.address[0].pincode"  name="pincode" id="pincode" class="form-control input-sm" placeholder="Postal Code">
                                         </div>
                                     </div>
     
@@ -238,27 +237,23 @@
                                 <div class="row">
                                     <div class="col-lg-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                <select class="form-control" id="Country">
-                                                      <option> Select Country</option>
-                                                      <option value="1">India</option>
-                                                      <option value="2">USA</option>
+                               <select class="form-control" id="Country1" ng-model="employee.address[1].country" ng-options="country.id as country.description for country in countryList" ng-change="getStateList('country1')">
+                                                      <option value=""> Select Country</option>
+                                                     </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                        <select class="form-control" id="State" ng-model="employee.address[1].state" ng-options="state.id as state.description for state in stateList1">
+                                                      <option value=""> Select State</option>
+                                                     
                                                         
                                                      </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                        <select class="form-control" id="State">
-                                                      <option> Select State</option>
-                                                      <option value="1">Delhi</option>
-                                                      <option value="2">Uttar Pradesh</option>
-                                                        
-                                                     </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-4 col-md-4">
-                                        <div class="form-group">
-                                             <input type="text" name="city" id="city" class="form-control input-sm" placeholder="City">
+                                             <input type="text" ng-model="employee.address[1].city" name="city1" id="city1" class="form-control input-sm" placeholder="City">
                                         </div>
                                     </div>
                                 </div>
@@ -267,7 +262,7 @@
 
                                 <div class="col-lg-4 col-sm-4 col-md-4">
                                         <div class="form-group">
-                                            <input type="text" name="pincode" id="pincode" class="form-control input-sm" placeholder="Postal Code">
+                                            <input type="text" name="pincode1" ng-model="employee.address[1].pincode" id="pincode1" class="form-control input-sm" placeholder="Postal Code">
                                         </div>
                                     </div>
     
@@ -289,36 +284,28 @@
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                <select class="form-control" id="Organization">
-                                                      <option> Select Organization</option>
-                                                      <option value="1">Accolite Software Ltd.</option>
-                                                      <option value="2">Accolite Software India Ltd.</option>
-                                                        <option value="3">Accolite Labs</option>
+                                <select class="form-control" id="Organization" ng-model="employee.organization" ng-options="org.id as org.orgName for org in organzationList">
+                                                      <option value=""> Select Organization</option>
+                                                    
                                                      </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                            <select class="form-control" id="BU">
-                                                      <option> Select Business Unit</option>
-                                                      <option value="1">Banking & Finance</option>
-                                                      <option value="2">Health & Care</option>
-                                                        <option value="3">Aviation</option>
-                                                 <option value="3">Telecommunication</option>
-                                                     </select>
+                                            <select class="form-control" id="BU" ng-model="employee.businessUnit" ng-options="unit.id as  unit.buName for unit in businessUnitList" ng-change="getClientList()">
+                                                      <option value=""> Select Business Unit</option>
+                                                    </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-sm-3 col-md-3">
+                                    
+                                       <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">
-                                            <select class="form-control" id="Designation">
-                                                      <option> Select Designation</option>
-                                                      <option value="1">Software Engineer</option>
-                                                      <option value="2">Senior Software Engineer</option>
-                                                        <option value="3">Associate Technical deleivery Manager</option>
-                                                 
-                                                     </select>
+                                            <select class="form-control" id="Clients" ng-model="employee.client" ng-options="client.id as cleint.clientName for client in clientList">
+                                                      <option> Select Client</option>
+                                                    </select>
                                         </div>
                                     </div>
+                                   
                                     <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">
                                             <select class="form-control" id="Project">
@@ -333,6 +320,14 @@
                                 </div>
 
                         <div class="row">
+                            
+                             <div class="col-lg-3 col-sm-3 col-md-3">
+                                        <div class="form-group">
+                                            <select class="form-control" id="Designation" ng-model="employee.designation" ng-options="designation.id as designation.name for designation in designationList">
+                                                      <option value=""> Select Designation</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
                                 <div class="col-lg-3 col-sm-3 col-md-3">
                                         <div class="form-group">

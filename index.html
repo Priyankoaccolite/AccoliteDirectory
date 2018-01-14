@@ -24,11 +24,10 @@
           <div class="collapse navbar-collapse">
            
             <div class="col-lg-8 col-md-9 margintop6">
-            <div ng-model="selectedPerson">    
-                 <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" localdata="peoples" searchfields="fullName" minlength="1" inputclass="form-control" titlefield="fullName"/>
+            <div>    
+                 <angucomplete id="ex1" placeholder="Search people" pause="300" selectedobject="selectedPerson" url="http://10.4.14.231:8080/accolite/hrms/employee/getEmployeeBySearch?searchText="  minlength="3" inputclass="form-control" titlefield="fullName" />
             </div>    
-            <div ng-if="selectedPerson" ng-init="init(selectedPerson)"></div>
-            </div>
+              </div>
             
             <ul class="nav navbar-nav navbar-right navbarUl">
              <!--<li><a  class="active" href="#">Home</a></li>
@@ -38,7 +37,8 @@
                 <li><span class="headerImgSpan">MUkesh Mishra</span><span><img src="./images/Man-PNG-Pic.png" class="smalluserImg" /></span></li>
                 <li><a  class="active" href="#">Help</a></li
               </ul>
-          </div><!-- /.navbar-collapse -->
+          <!-- /.navbar-collapse -->
+        </div>
         </nav>
         <nav class="navbar  navbar-inverse navbar-fixed-top bg-inverse" role="navigation" ng-if="home">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -69,10 +69,10 @@
             
 		<div ng-if="home" class="row col-lg-12 col-md-12 col-sm-12 searchbox">
             
-            <div ng-model="selectedPerson">
-                <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" localdata="peoples" searchfields="fullName" minlength="1" inputclass="form-control" titlefield="fullName"/>
+            <div>
+                <angucomplete id="ex2" placeholder="Search people" pause="300" selectedobject="selectedPerson" url="http://10.4.14.231:8080/accolite/hrms/employee/getEmployeeBySearch?searchText="  minlength="3" inputclass="form-control" titlefield="fullName" />
             </div>    
-            <div ng-if="selectedPerson" ng-init="init(selectedPerson)"></div>   
+             
  			
 		</div>
 

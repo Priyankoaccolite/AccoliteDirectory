@@ -1,4 +1,4 @@
-app.controller("employeecreationController",["$scope","lookupService","$stateParams","$http",function($scope,lookupService,$stateParams,$http){
+app.controller("employeecreationController",["$scope","lookupService","$stateParams","$http","$q",function($scope,lookupService,$stateParams,$http,$q){
     
     $scope.genderList=[];
     $scope.employementTypeList=[];
@@ -11,36 +11,67 @@ app.controller("employeecreationController",["$scope","lookupService","$statePar
     $scope.designationList=[];
     $scope.projectList=[];
     $scope.martialStatusList=[];
+    $scope.clientList=[];
+    $scope.stateList1=[];
     $scope.employee={};
-    $scope.employee.address=[
-        {
-          "addressType":null,
-            "address":"",
-            "country":null,
-            "state":null,
-            "city":"",
-            "pincode":""
-            
-        },
-        {
-          "addressType":null,
-            "address":"",
-            "country":null,
-            "state":null,
-            "city":"",
-            "pincode":""
-            
+    $scope.employee.address=[];
+    function employeeAddress(addressType,address,country,state,city,pincode){
+         this.addressType=addressType;
+         this.address=address;
+         this.country=country;
+         this.state=state;
+         this.city=city;
+         this.pincode=pincode;
+     }
+    
+    $scope.employee.address.push(new employeeAddress(null,"",null,null,"",""),new employeeAddress(null,"",null,null,"",""));
+    var getAllLookupPromise=lookupService.getAllLookups();
+    var getDesignationsPromise=lookupService.getDesignations();
+    var organizationPromise=lookupService.getOrganizations();
+    var businessUnitPromise=lookupService.getBusinessUnits();
+    var countryPromise=lookupService.getAllCountries();
+    var workLocationsPromise=lookupService.getWorkLocations();
+   $q.all([getAllLookupPromise,workLocationsPromise,getDesignationsPromise,organizationPromise,
+           businessUnitPromise,countryPromise]).then(function(res){
+        getParticularLookUp(res[0].data);
+        $scope.locationsList=$scope.locationsList.concat(res[1].data);
+        $scope.designationList= $scope.designationList.concat(res[2].data);
+        $scope.organzationList=$scope.organzationList.concat(res[3].data);
+        $scope.businessUnitList= $scope.businessUnitList.concat(res[4].data);
+        $scope.countryList=$scope.countryList.concat(res[5].data);
+        
+        
+        });
+    
+    $scope.getStateList=function(countryRef){
+        if(countryRef){
+            lookupService.getStates($scope.employee.address[1].country).then(function(res){
+            $scope.stateList1=[];
+            $scope.stateList1=$scope.stateList.concat(res.data);
+        }) 
         }
-    ];
-    $scope.getallLookups=function(){
-      lookupService.getAllLookups().then(function(res){
-         getParticularLookUp(res.data);
-          
-      },function(error){
-          console.log(error);
-      })
+        else{
+             lookupService.getStates($scope.employee.address[0].country).then(function(res){
+            $scope.stateList=[];
+            $scope.stateList=$scope.stateList.concat(res.data);
+        })
+        }
+       
     }
     
+    $scope.getClientList=function(){
+        lookupService.getClients($scope.employee.businessUnit).then(function(res){
+            $scope.clientList=[];
+            $scope.clientList=$scope.clientList.concat(res.data);
+        })
+    }
+    
+     $scope.projectList=function(){
+        lookupService.getProjects($scope.employee.client).then(function(res){
+            $scope.projectList=[];
+            $scope.projectList=$scope.projectList.concat(res.data);
+        })
+    }
     
     function getParticularLookUp(allLookUps){
         for(var i in allLookUps){
@@ -80,6 +111,8 @@ app.controller("employeecreationController",["$scope","lookupService","$statePar
         }
     }
     
-     $scope.getallLookups();
+    // $scope.getallLookups();
+    
+    
     
 }])

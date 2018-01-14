@@ -13,7 +13,13 @@ app.config(function($stateProvider){
         url: '/details',
         templateUrl: 'templates/detail.html',
         controller: 'detailController',
-        controllerAs: 'dc'
+        controllerAs: 'dc',
+        params:{
+            selectedPerson:null,
+        },
+    userDetails: function($stateParams, dataService) {
+      return dataService.getData($stateParams.selectedPerson.empCode);
+    },
     })
     
      $stateProvider.state('employeeCreation',{

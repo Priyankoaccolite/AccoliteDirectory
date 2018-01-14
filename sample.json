@@ -55,40 +55,7 @@
 
          }]
 	},
-	"groups":{
-		"size": 0,
-		"totalSize": 0,
-		"item": null
-	},
-	"aliases":{
-		"size": 0,
-		"totalSize": 0,
-		"item": null
-	},
-	"listings":{
-		"size": 0,
-		"totalSize": 0,
-		"item": null
-		},
-	"proids":{
-		"size": 0,
-		"totalSize": 0,
-		"item": null
-	},
-	"accounts":{
-		"size": 0,
-		"totalSize": 0,
-		"item": null
-	},
-	"buildings":{
-		"size": 0,
-		"totalSize": 0,
-		"item": null
-		},
-	"conferenceRooms":{
-		"size": 0,
-		"totalSize": 0,
-		"item": null
+	
 	}
     
     
