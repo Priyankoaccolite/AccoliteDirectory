@@ -28,7 +28,6 @@ app.config(function($stateProvider){
      })
     $stateProvider.state('listEmployee.detailEmployee',{
         url: '/detailEmployee/{paramId}',
-        //parent: 'listEmployee',
         templateUrl: 'templates/employeeDetail.html',
         controller: 'detailEmployeeController'
      })

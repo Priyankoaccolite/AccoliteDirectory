@@ -133,14 +133,61 @@ select{
 }
 #myGrid{
     width:100% !important;
-    height:100% !important;
+    height:200px !important;
 }
 .menu{
    border-bottom-width: thin;
-border-bottom-style: groove;
-margin-bottom: 15px;
+    border-bottom-style: groove;
+    margin-bottom: 15px;
 }
 
 .slick-header{
     height:25px;
+}
+
+.detailView{
+   margin: 5%;
+   
+} 
+.rowDetailView{
+    padding: 5px;
+    background-color: lightgray;
+    margin-bottom: 2px;
+}
+/*.rowLabelElement{
+    background-color: white;
+    width: 200px;
+    height: 45px;
+    margin: 25px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 45px;
+    
+}*/
+/*.rowDataElement{
+    position: relative;
+    left: 250px;
+    width: 200px;
+    background-color: white;
+    height: 45px;
+    bottom: 70px;
+    border-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+}*/
+.rowDataElement{
+    position: relative;
+    left: 250px;
+    width: 200px;
+    bottom: 33px;
+    text-align: center;
+ }
+.rowLabelElement{
+    width: 200px;
+    text-align: center;
+    line-height: 45px;
+    background-color: white;
+    position: relative;
+    left: 10px;
+    top: 10px;
 }

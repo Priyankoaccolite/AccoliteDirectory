@@ -23,7 +23,7 @@ app.controller("employeeListController",["$scope","dataService","$state",functio
   };
     //$scope.products=[];
     dataService.getEmployee().then(function(data){
-              /*var objArray=[];
+              var objArray=[];
               var dataArray=data.data;    
               for(var i=0;i<dataArray.length;i++){
                   var obj={};
@@ -33,17 +33,15 @@ app.controller("employeeListController",["$scope","dataService","$state",functio
                   obj.employeeCode=dataArray[i].employeeCode;
                   obj.skypeId=dataArray[i].skypeId;
                   objArray.push(obj);
-              }*/
+              }
+                dataService.gridData=objArray;
               dataService.data=data.data; 
-              /*for(var i=0;i<dataService.data.length;i++){
-                  $scope.products[i]=dataService.data[i].product_name;
-              }*/
-             $scope.gridInstance = new Slick.Grid("#myGrid", dataService.data, columns, options);
+              
+             $scope.gridInstance = new Slick.Grid("#myGrid", dataService.gridData, columns, options);
                 $scope.gridInstance.onClick.subscribe(function(e, args){
-                    //alert("helllo");
-                   // var data=args.grid.getData();
+                   
                     var paramName=e.target.textContent;
-                    //data[0].accoliteID;
+                   
                     $state.go("listEmployee.detailEmployee",{paramId: paramName});
                 });
     },function(error){

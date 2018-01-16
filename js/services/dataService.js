@@ -12,8 +12,9 @@ app.service("dataService",["$http","$q",function($http,$q){
     };
     this.getEmployee=function(){
         var defered=$q.defer();
-        //var getEmployeeUrl='http://10.4.14.179:8080/accolite/hrms/employee/getEmployeeBySearch?searchText=0000';
+        //var getEmployeeUrl='http://10.4.14.169:8080/accolite/hrms/employee/getAll';
         $http.get('employee.json').then(function(data){
+        //$http.get(getEmployeeUrl).then(function(data){
             defered.resolve(data);
         },function(error){
             defered.reject(error); 
