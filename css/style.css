@@ -191,3 +191,14 @@ select{
     left: 10px;
     top: 10px;
 }
+.gridColumnStyle:hover{
+    cursor:pointer;
+    color: blue;
+}
+.slick-header-column.ui-state-default{
+    height:24px !important;
+}
+.slick-header-columns, .slick-headerrow-columns, .slick-footerrow-columns{
+    height:36px !important;
+}
+

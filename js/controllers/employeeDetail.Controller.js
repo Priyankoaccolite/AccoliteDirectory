@@ -9,7 +9,7 @@ app.controller("detailEmployeeController",["$scope","dataService","$state","look
     $scope.employeedata={};
     var allEmployeeData=dataService.data;
     for(var i=0;i<allEmployeeData.length;i++){
-        if(allEmployeeData[i].firstName==employeeParams){
+        if(allEmployeeData[i].firstName==employeeParams||allEmployeeData[i].lastName==employeeParams||allEmployeeData[i].employeeCode==employeeParams||allEmployeeData[i].skypeId==employeeParams){
             $scope.employeedata=allEmployeeData[i];
         }
     }

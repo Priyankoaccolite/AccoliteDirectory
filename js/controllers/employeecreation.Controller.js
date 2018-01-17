@@ -62,10 +62,10 @@ app.controller("employeecreationController",["$scope","lookupService","$statePar
             $scope.stateList=$scope.stateList.concat(res.data);
         })
         }
-
+    }
        
 
-    ];
+    
 
     $scope.getallLookups=function(){
       lookupService.getAllLookups().then(function(res){

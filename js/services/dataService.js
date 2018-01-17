@@ -3,7 +3,7 @@ app.service("dataService",["$http","$q",function($http,$q){
 
     this.getData=function(){
         var defered=$q.defer();
-        $http.get('http://10.4.14.231:8080/accolite/hrms/employee/getEmployeeByEmpCode?employeeCode=0000').then(function(data){
+        $http.get('http://10.4.14.64:8080/accolite/hrms/employee/getEmployeeByEmpCode?employeeCode=0000').then(function(data){
             defered.resolve(data);
         },function(error){
             defered.reject(error); 
